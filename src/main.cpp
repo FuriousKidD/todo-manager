@@ -7,3 +7,10 @@
  * -Addition, Removal and Viewing of tasks
  * -loop to handle user input
  */
+#include <iostream>
+#include "include/Task.h" //if header files belong to different directories then include the path
+
+int main(){
+
+    return 0;
+}
