@@ -52,7 +52,7 @@ class TaskManager{
         /**
          * @brief Removes a task from the list at some position
          * @param index
-         * @return reomoved task
+         * @return reomoved task title
          */
         std::string removeTask(int index);
 
