@@ -9,17 +9,20 @@
  */
 #include <iostream>
 #include "../include/TaskManager.h" //if header files belong to different directories then include the path
+#include "../include/utils.h"
 
 int main(){
 
+    Utility utilities;
+
     //Testing TaskManager
-    
     TaskManager taskManager;
     int option;
     std::string taskName;
     int index;
 
     do{
+        utilities.clearScreen();//clears the screen of the previous contents to display the menu 
         std::cout << "TO DO LIST MANAGER \n"
                   << "1. Add Task\n"
                   << "2. View Tasks\n"
@@ -30,6 +33,7 @@ int main(){
 
         std::cin >> option;
         std::cin.ignore(); //ignores any leftover newline characters in the stream
+        utilities.clearScreen(); // clear the screen after selecting an option
 
         switch (option){
             case 1:
@@ -71,6 +75,6 @@ int main(){
                 std::cerr << "INVALID INPUT! TRY AGAIN. \n";
         }
     } while(option != 5);
-    
+
     return 0;
 }
