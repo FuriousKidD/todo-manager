@@ -40,12 +40,13 @@ void TaskManager::markTaskComplete(int index){
 /**
  * @brief Removes a task from the list
  * @param index
- * @return the removed task
+ * @return the removed task's title
  */
-Task TaskManager::removeTask(int index){
+std::string TaskManager::removeTask(int index){
     indexOutOfBounds(index);
-    Task removed = tasks[index];
+    std::string removed = tasks[index].getTitle();
     tasks.erase(tasks.begin() + index);
+    return removed;
 }
 
 /**
