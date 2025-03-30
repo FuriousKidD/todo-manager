@@ -20,6 +20,11 @@
 class TaskManager{
     private:
         std::vector<Task> tasks; ///< This will be a list of tasks
+        /**
+         * @brief Helper function for checking if index is within range
+         * @throws out_of_bounds exception
+         */
+        void indexOutOfBounds(int index);
 
     public:
         /**
