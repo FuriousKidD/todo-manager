@@ -54,7 +54,7 @@ class TaskManager{
          * @param index
          * @return reomoved task
          */
-        Task removeTask(int index);
+        std::string removeTask(int index);
 
         /**
          * @brief Gets the number of tasks that are in the list
