@@ -25,3 +25,35 @@ void TaskManager::displayTasks(){
         std::cout << std::endl; 
     }
 }
+
+/**
+ * @brief Marks a specific task from the list of tasks, complete, given an index
+ * @param index the position of the task in the list
+ */
+void TaskManager::markTaskComplete(int index){
+    
+    //error handling
+    indexOutOfBounds(index);
+    tasks[index].markComplete();
+}
+
+/**
+ * @brief Removes a task from the list
+ * @param index
+ * @return the removed task
+ */
+Task TaskManager::removeTask(int index){
+    indexOutOfBounds(index);
+    Task removed = tasks[index];
+    tasks.erase(tasks.begin() + index);
+}
+
+/**
+ * @brief Gets the total number of existing tasks
+ * @return total number of tasks
+ */
+int TaskManager::getTaskCount() const{
+    return tasks.size();
+}
+
+
