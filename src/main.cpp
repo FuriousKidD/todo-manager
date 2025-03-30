@@ -71,23 +71,6 @@ int main(){
                 std::cerr << "INVALID INPUT! TRY AGAIN. \n";
         }
     } while(option != 5);
-
-
-    //Testing functionality of Task class
-    {
-        //Creating the task
-        Task gitTut = Task("Finish Git tutorial");
-
-        //Display the task before completion
-        std::cout << "Before Completion:" << std::endl;
-        gitTut.displayTask();
-
-        //Mark as complete
-        gitTut.markComplete();
-
-        //Display the task after completion
-        std::cout << "After Completion:" << std::endl;
-        gitTut.displayTask();
-    }
+    
     return 0;
 }
