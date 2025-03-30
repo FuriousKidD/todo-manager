@@ -24,7 +24,11 @@ class TaskManager{
          * @brief Helper function for checking if index is within range
          * @throws out_of_bounds exception
          */
-        void indexOutOfBounds(int index);
+        void indexOutOfBounds(int index){
+            if(index < 0 || index > tasks.size() - 1){
+                throw std::out_of_range("index is out of bounds!");
+            }
+        }
 
     public:
         /**
